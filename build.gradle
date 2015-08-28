@@ -1,0 +1,17 @@
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'codenarc'
+
+repositories {
+  jcenter()
+}
+
+dependencies {
+  compile 'org.jenkins-ci.main:jenkins-war:1.499'
+  compile 'org.jenkins-ci.main:jenkins-core:1.499'
+  compile 'org.jenkins-ci.main:maven-plugin:1.499'
+}
+
+task wrapper(type: Wrapper) {
+  gradleVersion = '2.3'
+}
